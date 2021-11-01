@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+/*STYLESHEET FOR MEDIA QUERY AND MAIN FEATURES*/
+	/*600px and up*/
+	@media only screen and (max-width: 600px) {				/*what media query changes based on size of screen*/
+		.header {font-size:20px;}								
+		.center {width: 100%;}					/*adjusts all other image sizes*/
+	}
+
+	/*690px and up*/
+	@media only screen and (max-width:690px) {
+		.navbar a {width:100%; border:1px solid white;}  /*makes all the buttons go vertical instead of horizontal and puts a border*/
+	}
+
+
+	/*600px and up*/
+	@media only screen and (min-width: 600px) {
+		.header {font-size:25px;}
+		.center {width: 100%;}
+	}
+	
+	
+	/*768px and up*/
+	@media only screen and (min-width: 768px) {
+		.header {font-size:30px;}
+		.center {width: 80%;}
+
+	} 
+
+	/*992px and up*/
+	@media only screen and (min-width: 992px) {
+		.header {font-size:35px;}
+		.center {width: 70%;}
+	} 
+
+
+/*HEADER*/
+	.header {
+		font-family:'Courier New';	/*New font family for header*/
+		background-color:#ffffff;	/*Background  color of header*/
+		padding: 1px;				/*Pads one pixel around heading because 0 breaks it*/
+		text-align:center;
+	}
+
+
+
+/*NAVIGATION BAR STYLESHEET*/
+	.navbar {
+		overflow: hidden; 				/*Hides any part of the nav bar that overflows*/
+		background-color: #004D4D;		/*Navbar color*/
+	}
+	.navbar a {
+		font-family: Arial, Helvetica, sans-serif; /*Sets font single page buttons*/
+		float: left;
+		display:block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;				/*Padding around buttons*/
+		text-decoration: none;			/*Gets rid of underlines on buttons in navbar*/
+	}
+	.navbar a:hover{
+		background-color:#000000;		/*Inherited color, color of nav when hovered over*/
+		color:white;
+	}
+	.active {
+		background-color: #006161;
+		color: white;
+	}
+/*END NAVBAR*/
+
+
+
+/*BODY*/
+	* {
+		box-sizing: border-box;			/*Includes padding and boder in total width and height*/
+	}
+	
+	body {
+		background-image: url('images/backgroundPic.jpg');
+		margin:0;
+	}
+
+	.main{						/*Edits the area in which content is put. Adjusts it according to the size of the screen*/
+		width:80%;						/*content box is 80 percent of viewable area*/
+		padding:5px;					/*Pads the area between content in the box and the side of the box*/
+		background-color:#f2f2f2;
+		margin-top: 1vw;				/*Adjusts margin between content box and navbar*/
+		margin-left:auto;				/*Centers the content box*/
+		margin-right:auto;
+	}
+
+	.sectionlinks {						/*Edits the link at the top of the workshop and other pages*/
+		color:black; 
+		text-decoration:underline; 
+		font-size:30px;
+	}
+
+	.links {							/*Class for external links styling*/
+		color:black; 
+		text-decoration:underline;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	h2 {						/*Adjusts h2 tag which is used for the article titles at the top of the white sections*/
+		font-size:40px;
+		text-align:center;
+	}
+
+	p {font-size:20px;}					/*font size is not responsive because i have bad eyesight and like larger font*/
+
+	a {
+		color: white;					/*color of links in footer*/
+		text-decoration: none;			/*gets rid of underlines in links*/
+		font-size:18px;					/*changes font size of links*/
+	}
+
+	.center {							/*Center class used for images*/
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:1vw;
+	}
+
+
+
+/*STYLESHEET FOR TABLES AND IMAGES*/
+/*TABLE STYLING*/
+	table {
+		width: 60%;				/*Makes the table 60 percent of the page no matter what*/
+		margin-left:auto;			/*centers it*/
+		margin-right:auto;
+	}
+
+	table, th, td {
+		border: 3px solid black;	/*makes a border around the cells of the table*/
+		border-collapse: collapse;	/*merges the borders*/
+		border-color: #006161;		/*Makes the border teal*/
+	}
+
+	th, td {
+		padding: 7px;				/*pads the area between text and the border on the bottom and top*/
+		text-align: left;    		
+	}
+
+
+/*RESPONSIVE IMAGE GALLERY HOME PAGE*/
+	.row {
+		display: flex;					/*allows the images to adjuest their size as needed so they go across the screen*/
+		flex-wrap: wrap;
+		padding: 0 20px;				/*padding to left and right of grid*/
+	}
+
+	.col {
+		flex: 50%;						/*defualt each image is 50 percent of the section*/
+		max-width: 50%;
+		padding: 0px 6px;
+	}
+
+	@media screen and (max-width: 700px) {		/*Media query for image show*/
+		.col {
+			flex: 100%;
+			max-width: 100%;
+		}
+	}
+	
+	.col img {
+		margin-top: 12px;				/*Margin between the top and bottom of pictures*/
+	}
+/*END IMAGE GRID*/
+
+
+
+/* FOOTER*/
+	a:hover {color: black;}				/*when you hover over the links its black font*/
+	footer {
+		text-align: center;
+		padding: 5x;					/*Pads the area between test and the edge of teh footer*/
+		background-color:#004D4D;		/*Color of footer*/
+		color:white;					/*text color of foooter*/
+		margin-top:1vw;					
+	}
